@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+.input-container {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.icon {
+  padding: 10px;
+  background: #f2a580;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+}
+
+.input-field:focus {
+  border: 2px #f2a580;
+}
+
+/* Set a style for the submit button */
+.btn {
+  background-color: #f2a580;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+#text{
+  text-align:right;
+}
+
+
+
+</style>
+</head>
+<body>
+
+<form action="//localhost:8888/wpproject/friendsh.php" method="POST" style="max-width:500px;margin:auto">
+  <h2>Registeration Form</h2>
+  <div class="input-container">
+    <i class="fa fa-user icon"></i>
+    <input class="input-field" type="text" placeholder="Enter your Name here" name="usrnm" required>
+  </div>
+
+  <div class="input-container">
+    <i class="fa fa-envelope icon"></i>
+    <input class="input-field" type="text" placeholder="Enter your Email ID here" name="email" required>
+  </div>
+
+  <div class="input-container">
+    <i class="fa fa-phone icon"></i>
+    <input class="input-field" type="tel" placeholder="Enter your Contact Number here" name="contact" required>
+  </div>
+
+    <div class="input-container">
+    <i class="fa fa-user icon"></i>
+    <br> &nbsp; Gender: &nbsp;
+     <p id="text">
+    <input type="radio" name="gender" value="male" align="left"> Male
+    <input type="radio" name="gender" value="female"> Female
+    <input type="radio" name="gender" value="other"> Other  </p>
+ </div>
+
+  <div class="input-container">
+    <i class="fa fa-book icon"></i>
+    <input class="input-field" type="text" placeholder="Enter your Course here" name="course" required>
+  </div>
+
+  <div class="input-container">
+    <i class="fa fa-book icon"></i>
+    <input class="input-field" type="text" placeholder="Enter your Year here" name="year" required>
+  </div>
+
+Select an option: <br>
+ <div class="input-container">
+<select name="option">
+    <option value="chocolates">Send chocolates</option>
+    <option value="card">Send a card</option>
+  </select>
+</div>
+
+If you have selected to send chocolates, please select from the following!
+ <div class="input-container">
+<select name="option1">
+  <option  value="None"> None </option>
+    <option value="Dairy Milk">Dairy Milk</option>
+    <option value="5star">5 Star</option>
+    <option  value="Ferrero Rocher">Ferrero Rocher</option>
+
+  </select>
+</div>
+
+Please select the number of chocolates you want to send : <br>
+  <input type="range" name="noofchoco" min="0" max="5" >
+    </div>
+
+<br> If you have selected to send a card, please enter the message for your friend! <br> <br>
+ <div class="input-container">
+<textarea name="message" rows="10" cols="50" placeholder="Enter your message here">
+</textarea>
+</div>
+
+<br>
+
+Please enter the details of  your friend below: <br> <br>
+<div class="input-container">
+    <i class="fa fa-user icon"></i>
+    <input class="input-field" type="text" placeholder="Enter your friend's Name here" name="usrnm1" required>
+  </div>
+
+
+  <div class="input-container">
+    <i class="fa fa-book icon"></i>
+    <input class="input-field" type="text" placeholder="Enter your friend's Course here" name="course1" required>
+  </div>
+
+  <div class="input-container">
+    <i class="fa fa-book icon"></i>
+    <input class="input-field" type="text" placeholder="Enter your friend's Year here" name="year1" required>
+  </div>
+
+
+
+  <button type="submit" class="btn">Register</button>
+</form>
+
+</body>
+</html>
